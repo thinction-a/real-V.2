@@ -1,0 +1,48 @@
+.btn {
+    background: none;
+    color: #58ccff;
+}
+
+.clicked {
+    background: #58ccff;
+    color: #fff;
+}
+
+.button--wrapper {
+    margin: 0 auto;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button--wrapper button {
+    font-size: 2rem;
+    background: none;
+    border: 1px solid #000;
+    padding: 3% 8%;
+    word-break: keep-all;
+    color: #b1b1b1bd;
+    border-radius: 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.button--wrapper .recent {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.button--wrapper .popular {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+.focused {
+    background: #58ccff !important;
+    color: #fff !important;
+}

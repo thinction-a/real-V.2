@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAYAWARD_REAL_v.2</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="sidebar" onclick="sidebarOpen()">
+            <img src="./images/functionBtn/top-bar.svg" alt="">
+        </div>
+        <div class="center">
+            <img src="./playaward_logo.png" alt="">
+        </div>
+        <div class="profile">
+            <img src="./images/sampleImg/profile_sample.png" alt="">
+        </div>
+    </header>
+
+    <section id="sidebar">
+        <div class="alarm">
+            <svg height="512pt" viewBox="0 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"
+                onclick="sidebarClose()">
+                <path
+                    d="m256 512c-141.160156 0-256-114.839844-256-256s114.839844-256 256-256 256 114.839844 256 256-114.839844 256-256 256zm0-475.429688c-120.992188 0-219.429688 98.4375-219.429688 219.429688s98.4375 219.429688 219.429688 219.429688 219.429688-98.4375 219.429688-219.429688-98.4375-219.429688-219.429688-219.429688zm0 0" />
+                <path
+                    d="m347.429688 365.714844c-4.679688 0-9.359376-1.785156-12.929688-5.359375l-182.855469-182.855469c-7.144531-7.144531-7.144531-18.714844 0-25.855469 7.140625-7.140625 18.714844-7.144531 25.855469 0l182.855469 182.855469c7.144531 7.144531 7.144531 18.714844 0 25.855469-3.570313 3.574219-8.246094 5.359375-12.925781 5.359375zm0 0" />
+                <path
+                    d="m164.570312 365.714844c-4.679687 0-9.355468-1.785156-12.925781-5.359375-7.144531-7.140625-7.144531-18.714844 0-25.855469l182.855469-182.855469c7.144531-7.144531 18.714844-7.144531 25.855469 0 7.140625 7.140625 7.144531 18.714844 0 25.855469l-182.855469 182.855469c-3.570312 3.574219-8.25 5.359375-12.929688 5.359375zm0 0" />
+            </svg>
+            <img src="./images/functionBtn/sidebar_alarm.svg" alt="">
+        </div>
+        <table class="userinfo">
+            <tr>
+                <td><img src="./images/sampleImg/sidebar_profile.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>최지원</td>
+            </tr>
+            <tr>
+                <td>bit1615@gmail.com</td>
+            </tr>
+        </table>
+        <table class="sidemenu">
+            <colgroup>
+                <col width="20%">
+                <col width="80%">
+            </colgroup>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_main.svg" alt=""></td>
+                <td>메인</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_offer.svg" alt=""></td>
+                <td>게임 할인 소식</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_reward.svg" alt=""></td>
+                <td>리워드 스토어</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_event.svg" alt=""></td>
+                <td>이벤트</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_release.svg" alt=""></td>
+                <td>출시 예정 게임 찾기</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_profile.svg" alt=""></td>
+                <td>프로필 수정</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_logout.svg" alt=""></td>
+                <td>로그아웃</td>
+            </tr>
+        </table>
+        <table class="setting">
+            <colgroup>
+                <col width="20%">
+                <col width="80%">
+            </colgroup>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_setting.svg" alt=""></td>
+                <td>앱 설정</td>
+            </tr>
+            <tr>
+                <td><img src="./images/functionBtn/sidebar_info.svg" alt=""></td>
+                <td>PLAY AWARD 정보</td>
+            </tr>
+        </table>
+    </section>
+    <div id="sidebarOverlay" onclick="sidebarClose()"></div>
+
+
+    <section class="section__slider">
+        <div class="searchbarWrap">
+            <img src="./images/functionBtn/search.svg" alt="">
+            <input type="search" name="" id="mainSearch" placeholder="게임 검색">
+            <img src="./images/functionBtn/searchbar_right.svg" alt="">
+        </div>
+        <div class="slider">
+            <img src="./images/sampleImg/sliderimg_sample.png" alt="">
+            <div class="sliderOverlay"></div>
+            <div class="text">
+                <p>고대 이집트에서</p>
+                <p>즐기는 액션</p>
+                <h2>어쌔신크리드 : 오리진</h2>
+            </div>
+            <button class="btn btn__slider">
+                자세히 보기
+            </button>
+        </div>
+    </section>
+
+    <section class="section section__recommend">
+        <div class="titlewrapper">
+            <h2><b>${유저명}님</b>을 위한 <b>추천</b>게임</h2>
+            <div class="page--move">더 보기</div>
+        </div>
+        <div class="games">
+            <div class="game1">
+                <div class="imgwrapper">
+                    <img src="./images/sampleImg/games_sample1.png" alt="">
+                </div>
+                <h3>FIFA 20</h3>
+                <div class="btn">예상 &bigstar; 4.2</div>
+            </div>
+            <div class="game2">
+                <div class="imgwrapper">
+                    <img src="./images/sampleImg/games_sample2.png" alt="">
+                </div>
+                <h3>어쌔신 크리드</h3>
+                <div class="btn">예상 &bigstar; 4.6</div>
+            </div>
+            <div class="game3">
+                <div class="imgwrapper">
+                    <img src="./images/sampleImg/games_sample3.png" alt="">
+                </div>
+                <h3>리그 오브 레전드</h3>
+                <div class="btn">예상 &bigstar; 4.1</div>
+            </div>
+        </div>
+    </section>
+    <section class="section section__keyword">
+        <div class="titlewrapper">
+            <h2><b>3월 1주차</b> 인기 키워드</h2>
+        </div>
+        <div class="content">
+            <ul class="device">
+                <li class="device1 selected">PC
+                    <div class="guideline guideline1"></div>
+                </li>
+                <li class="device2">모바일
+                    <div class="guideline guideline2"></div>
+                </li>
+                <li class="device3">콘솔
+                    <div class="guideline guideline3"></div>
+                </li>
+            </ul>
+            <div class="tablewrap">
+                <table class="tags">
+                    <tr>
+                        <td class="btn">&nbsp;# FPS&nbsp;</td>
+                        <td class="btn">&nbsp;# 오픈월드&nbsp;</td>
+                        <td class="btn">&nbsp;# 슈팅&nbsp;</td>
+                        <td class="btn">&nbsp;# 샌드박스&nbsp;</td>
+                        <td class="btn">&nbsp;# 액션&nbsp;</td>
+                        <td class="btn">&nbsp;# 레이싱&nbsp;</td>
+                        <td class="btn">&nbsp;# 캐쥬얼&nbsp;</td>
+                        <td class="btn">&nbsp;# 스포츠&nbsp;</td>
+                        <td class="btn">&nbsp;# RTS&nbsp;</td>
+                        <td class="btn">&nbsp;# AOS&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="game--wrapper">
+                <div class="imgwrap">
+                    <img src="./images/sampleImg/keyword_sample1.png" alt="">
+                </div>
+                <div class="textwrap">
+                    <div class="game--title">배틀그라운드 모바일</div>
+                    <div class="game--corp">펍지주식회사, 텐센트</div>
+                    <ul class="game--info">
+                        <li><span>평균</span><br>&bigstar;4.2</li>
+                        <li><span>리뷰</span><br>10만</li>
+                        <li><span>플랫폼</span><br>
+                            <img src="./images/functionBtn/ios_icon.svg" alt="">
+                            <img src="./images/functionBtn/android_icon.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="game--wrapper">
+                <div class="imgwrap">
+                    <img src="./images/sampleImg/keyword_sample2.png" alt="">
+                </div>
+                <div class="textwrap">
+                    <div class="game--title">콜 오브 듀티: 모바일</div>
+                    <div class="game--corp">액티비전</div>
+                    <ul class="game--info">
+                        <li><span>평균</span><br>&bigstar;4.5</li>
+                        <li><span>리뷰</span><br>5만</li>
+                        <li><span>플랫폼</span><br>
+                            <img src="./images/functionBtn/ios_icon.svg" alt="">
+                            <img src="./images/functionBtn/android_icon.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="game--wrapper">
+                <div class="imgwrap">
+                    <img src="./images/sampleImg/keyword_sample3.png" alt="">
+                </div>
+                <div class="textwrap">
+                    <div class="game--title">인피니티 옵스: SF FPS</div>
+                    <div class="game--corp">Azur Interactive Games Limited</div>
+                    <ul class="game--info">
+                        <li><span>평균</span><br>&bigstar;4.2</li>
+                        <li><span>리뷰</span><br>2천</li>
+                        <li><span>플랫폼</span><br>
+                            <img src="" alt="">
+                            <img src="./images/functionBtn/android_icon.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="page--move">더 보기</button>
+        </div>
+    </section>
+
+    <section class="section section__ad">
+        <div class="imgwrap">
+            <div class="ad--mark">
+                AD
+            </div>
+            <img src="./images/sampleImg/ad_sample_original.png" alt="">
+        </div>
+    </section>
+
+    <section class="section section__review">
+        <div class="titlewrapper">
+            <h2><b>실시간</b> 리뷰</h2>
+        </div>
+        <div class="content">
+            <div class="toggles">
+                <div class="toggle--wrapper">
+                    <!-- 스와이프 버튼,스와이프 미적용,둥근처리 미적용 -->
+                    <button class="recent">최신</button>
+                    <button class="popular focused">인기</button>
+                </div>
+                <div class="reload" id="review_reload">
+                    <img src="./images/functionBtn/review_reload.svg" alt="">
+                </div>
+            </div>
+            <div class="review">
+                <div class="profile--wrap">
+                    <img src="./images/sampleImg/review--profile_sample1.png" alt="">
+                    <p>최지원</p>
+                    <p>3분 전</p>
+                </div>
+                <div class="content--wrap">
+                    <p class="text">
+                        슬래지해머 게임스에서 개발, 액티비전에서 유통하는 콜 오브 듀티 시리즈 14번째 작품이다. '콜 오브 듀티: 월드 앳 워 2'는 시리즈 최초로 vr 모션 인식 시스템이 적용되었으며, 이것은 물론 개소리다.
+                    </p>
+                    <ul class="feed--content">
+                        <li>
+                            <div class="info">
+                                <div class="imgwrap">
+                                    <img src="./images/sampleImg/review--game_sample1.png" alt="">
+                                </div>
+                                <div class="textwrap">
+                                    <p>콜 오브 듀티 WWⅡ</p>
+                                    <div class="star--wrap">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+                                <g id="그룹_9071" data-name="그룹 9071" transform="translate(9311 -680)">
+                                  <path id="패스_3255" data-name="패스 3255" d="M0,0H30V30H0Z" transform="translate(-9311 680)" fill="none"/>
+                                  <g id="like_1_" data-name="like (1)" transform="translate(-9308 682.5)">
+                                    <path id="패스_3253" data-name="패스 3253" d="M5.492,193.3h-2.8A2.7,2.7,0,0,0,0,195.995v7.845a2.7,2.7,0,0,0,2.694,2.694h2.8Zm0,0" transform="translate(0 -183.387)" stroke="#0046bb" fill="none"/>
+                                    <path id="패스_3254" data-name="패스 3254" d="M157.815,8.345h-6.72V3.194A2.7,2.7,0,0,0,148.4.5h-1.569a2.7,2.7,0,0,0-2.694,2.694V6.467l-1.673,2.092V23.147h11.428a4.421,4.421,0,0,0,3.554-2.091l2.018-3.632a9.667,9.667,0,0,0,1.045-4.031V11.039a2.7,2.7,0,0,0-2.694-2.694Zm0,0" transform="translate(-135.508)" stroke="#0046bb" fill="#fff"/>
+                                  </g>
+                                </g>
+                              </svg>                              
+                        </li>
+                        <li class="unlikeBtn">
+                            <img src="./images/functionBtn/review_unlike.svg" alt="" class="noFill">
+                            <img src="./images/functionBtn/review_unlike_filled.svg" alt="" class="filled">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="review">
+                <div class="profile--wrap">
+                    <img src="./images/sampleImg/review--profile_sample2.png" alt="">
+                    <p>김민석</p>
+                    <p>3분 전</p>
+                </div>
+                <div class="content--wrap">
+                    <p class="text">
+                        게임 화면에는 특수 공격 버튼 밖에 존재하지 않았고, 화면 상을 탭하면 그 탭한 곳으로 AI가 알아서 경로를 잡아 이동하는 시스템으로 간편한 조작을 자랑하고, 이러한 간편한 조작 덕분에 유저는 게임의 재미에 더욱 몰입할 수 있을 것이다.
+                    </p>
+                    <ul class="feed--content">
+                        <li>
+                            <div class="info">
+                                <div class="imgwrap">
+                                    <img src="./images/sampleImg/review--game_sample2.png" alt="">
+                                </div>
+                                <div class="textwrap">
+                                    <p>브롤스타즈</p>
+                                    <div class="star--wrap">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                        <img src="./images/functionBtn/review_star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/functionBtn/review_like.svg" alt="" class="likeBtn">
+                        </li>
+                        <li class="unlikeBtn">
+                            <img src="./images/functionBtn/review_unlike.svg" alt="" class="noFill">
+                            <img src="./images/functionBtn/review_unlike_filled.svg" alt="" class="filled">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page--move">더 보기</div>
+        </div>
+    </section>
+
+    <section class="section section__favorite">
+        <div class="titlewrapper">
+            <h2><b>즐겨찾기</b></h2>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="imgwrapper">
+                        <img src="./images/functionBtn/favorite_sale.svg" alt="">
+                    </div>
+                    <p>
+                        할인소식
+                    </p>
+                </li>
+                <li>
+                    <div class="imgwrapper">
+                        <img src="./images/functionBtn/favorite_release.svg" alt="">
+                    </div>
+                    <p>
+                        출시일정
+                    </p>
+                </li>
+                <li>
+                    <div class="imgwrapper">
+                        <img src="./images/functionBtn/favorite_event.svg" alt="">
+                    </div>
+                    <p>
+                        이벤트
+                    </p>
+                </li>
+                <li>
+                    <div class="imgwrapper">
+                        <img src="./images/functionBtn/favorite_reward.svg" alt="">
+                    </div>
+                    <p>
+                        리워드
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer--main">
+            <img src="./images/functionBtn/footer_first(select).svg" alt="">
+            <p class="selected">메인</p>
+        </div>
+        <div class="footer--evaluate">
+            <img src="./images/functionBtn/footer_second.svg" alt="">
+            <p>평가</p>
+        </div>
+        <div class="footer--recommend">
+            <img src="./images/functionBtn/footer_third.svg" alt="">
+            <p>추천</p>
+        </div>
+        <div class="footer--ranking">
+            <img src="./images/functionBtn/footer_fourth.svg" alt="">
+            <p>순위</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/commonfunction.js"></script>
+</body>
+
+</html>
